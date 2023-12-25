@@ -1,10 +1,9 @@
 provider "aws" {
-  region = "ap-southeast-4"     # set your region 
+  region = "ap-southeast-4"
 }
 
 resource "aws_instance" "example" {
-  ami = "ami-03842bc45d2ad8394"   # ami id
-  instance_type = "t3.micro"
-  subnet_id = "subnet-03684481c2e543ddf"
-  key_name = "testkey"
+      ami = var.ami_value
+      instance_type = var.instance_type_value
+      subnet_id= var.subnet_id_value
 }
